@@ -17,6 +17,12 @@ namespace CSor1k.Compat
 		void Write(uint offset, T value);
 	}
 
+	/// <summary>
+	/// Represents a generic, fixed-length binary data buffer. Based upon the
+	/// Mozilla web API.
+	/// Like the browser version, you can't directly manipulate the contents.
+	/// Instead, you use the ArrayView classes (Int32Array, Uint8Array).
+	/// </summary>
 	public class ArrayBuffer
 	{
 		protected byte[] buffer;
@@ -47,6 +53,10 @@ namespace CSor1k.Compat
 			}
 		}
 
+		/// <summary>
+		/// This class is not intended to be used directly.
+		/// </summary>
+		/// <see cref="Uint8Array"/>
 		public sealed class IO_Uint8 : ArrayBufferView<byte>
 		{
 			public IO_Uint8(ArrayBuffer source, int offset)
@@ -65,6 +75,10 @@ namespace CSor1k.Compat
 			}
 		}
 
+		/// <summary>
+		/// This class is not intended to be used directly.
+		/// </summary>
+		/// <see cref="Int32Array"/>
 		public sealed class IO_Sint32 : ArrayBufferView<Int32>
 		{
 			public IO_Sint32(ArrayBuffer source, int offset)
