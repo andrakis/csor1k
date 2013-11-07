@@ -20,13 +20,13 @@ Implemented
 -----------
 
 * ArrayBuffer, Int32Array, Uint8Array (C# versions of multiview buffers)
+* ram
 
 
 Partially Implmented
 --------------------
 
-* ram
-
+* (coming soon)
 
 Remaining
 ---------
