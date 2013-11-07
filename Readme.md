@@ -1,7 +1,7 @@
 CSor1k - C# OpenRISC 1000 Emulator
 ===================================
 
-This is a C# port of [s-macke/jor1k](s-macke/jor1k), the JavaScript
+This is a C# port of [s-macke/jor1k](/s-macke/jor1k), the JavaScript
 OpenRISC 1000 emulator.
 
 
