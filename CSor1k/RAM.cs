@@ -7,33 +7,6 @@ using System.Threading.Tasks;
 
 namespace CSor1k
 {
-	public class Device
-	{
-		public int deviceaddr;
-		public int devicesize;
-
-		public Device(int addr, int size)
-		{
-			deviceaddr = addr;
-			devicesize = size;
-		}
-
-		public bool WithinAddress(UInt32 addr)
-		{
-			return addr >= deviceaddr && addr <= (deviceaddr + devicesize);
-		}
-
-		public Int32 ReadReg32(long address)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void WriteReg32(long address)
-		{
-			throw new NotImplementedException();
-		}
-	}
-
 	public class RAM
 	{
 		public readonly ArrayBuffer mem;
@@ -49,7 +22,7 @@ namespace CSor1k
 			this.uint8mem = new Uint8Array(this.mem, ramoffset);
 		}
 
-		public void AddDevice(Device device, int devaddr, int devsize)
+		public void AddDevice(Device device, UInt32 devaddr, UInt32 devsize)
 		{
 			device.deviceaddr = devaddr;
 			device.devicesize = devsize;
