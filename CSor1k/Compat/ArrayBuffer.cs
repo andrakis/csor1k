@@ -43,7 +43,7 @@ namespace CSor1k.Compat
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
 			protected static uint to_byte_offset(uint location, uint bits)
 			{
-				return location / (bits / 8);
+				return location * (bits / 8);
 			}
 		}
 
