@@ -74,13 +74,13 @@ namespace CSor1k.Compat
 
 			public override Int32 Read(uint location)
 			{
-				return BitConverter.ToInt32(source.buffer, (int)to_byte_offset(location, 32));
+				return BitConverter.ToInt32(source.buffer, this.offset + (int)to_byte_offset(location, 32));
 			}
 
 			public override void Write(uint location, Int32 value)
 			{
 				byte[] bytes = BitConverter.GetBytes(value);
-				bytes.CopyTo(source.buffer, (int)to_byte_offset(location, 32));
+				bytes.CopyTo(source.buffer, this.offset + (int)to_byte_offset(location, 32));
 			}
 		}
 	}
